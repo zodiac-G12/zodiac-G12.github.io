@@ -2,11 +2,11 @@ function textadd(){
   $(function(){
     var html = window.location.href.split("\.")[2].split("/")[1] + '.txt';
     $.ajax({
-      url: html,
+      url: 'https://zodiac-g12.github.io/' + html,
       type: 'get',
       success: function(data){
-        alert(data[0]);
-        $('#text-file').text(data[0]);
+        var content = $($(data.responseText).text()).text();
+        $('#text-file').text(content);
       }
     });
   });
