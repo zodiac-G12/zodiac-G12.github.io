@@ -5,8 +5,8 @@ function mama(){
     document.getElementById("enforcement").textContent = "👈可愛い";
   }
 
-  if(navigator.userAgent.indexOf('iPhone') == 0 && navigator.userAgent.indexOf('Android') == 0){
-    document.getElementById("jsadd").src = "js/app.js";
+  if(navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('Android') > 0){
+    document.getElementById("jsadd").src = "";
   }
 
   console.log(maman[Math.floor(Math.random()*maman.length)]);
