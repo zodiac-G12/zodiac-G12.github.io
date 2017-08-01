@@ -5,7 +5,8 @@ function textadd(){
       url: html,
       type: 'get',
       success: function(data){
-        $('#text-file').text(data);
+        alert(data[0]);
+        $('#text-file').text(data[0]);
       }
     });
   });
