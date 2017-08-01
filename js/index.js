@@ -5,8 +5,10 @@ function mama(){
     document.getElementById("enforcement").textContent = "👈可愛い";
   }
 
-  if(navigator.userAgent.indexOf('iPhone') == 0 && navigator.userAgent.indexOf('Android') == 0){
-    document.getElementById("jsadd").src = "js/app.js";
+  if(navigator.platform.indexOf('iOS') > 0 || navigator.platform.indexOf('Android') > 0){
+    document.getElementById("jsadd").src = "";
+    var node = document.getElementById("particles-js");
+    node.parentNode.removeChild(node);
   }
 
   console.log(maman[Math.floor(Math.random()*maman.length)]);
