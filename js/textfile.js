@@ -6,7 +6,6 @@ function textadd(){
       type: 'get',
       success: function(data){
         var content = $($(data.responseText).text()).text();
-        alert(content);
         $('#text-file').text(content);
       }
     });
