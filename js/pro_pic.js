@@ -1,5 +1,5 @@
 function main(){
-  $(document).ready(function(){
+  $(function(){
     $.ajax({
       url: 'https://twitter.com/zodi_G12',
       type: 'GET',
