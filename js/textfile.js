@@ -5,7 +5,7 @@ function textadd(){
       url: html,
       type: 'get',
       success: function(data){
-        console.log(data.split("\n"));
+        $('#text-file').text(data);
       }
     });
   });
