@@ -5,7 +5,9 @@ function textadd(){
       url: 'https://zodiac-g12.github.io/' + html,
       type: 'get',
       success: function(data){
-        var content = $($(data.responseText).text()).text();
+        var content = $($(data.responseText).text());
+        alert(content);
+        console.log(content);
         $('#text-file').text(content);
       }
     });
