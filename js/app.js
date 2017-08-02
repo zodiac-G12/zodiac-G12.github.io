@@ -21,11 +21,6 @@ particlesJS("particles-js", {
       "polygon": {
         "nb_sides": 5
       },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
     },
     "opacity": {
       "value": 0.5,
@@ -56,7 +51,7 @@ particlesJS("particles-js", {
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 5,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -64,8 +59,8 @@ particlesJS("particles-js", {
       "bounce": false,
       "attract": {
         "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
+        "rotateX": window.innerWidth,
+        "rotateY": window.innerHeight
       }
     }
   },
