@@ -1,7 +1,7 @@
 /* ---- particles.js config ---- */
 
 particlesJS("particles-js", {
-  if(navigator.platform.indexOf('Win') != -1 && navigator.platform.indexOf('Mac') != 0 && navigator.platform.indexOf('Linux') != -1){
+  if(navigator.platform.indexOf('Win') != -1 || navigator.platform.indexOf('Mac') != 0 || navigator.platform.indexOf('Linux') != -1){
     "particles": {
       "number": {
         "value": 380,
