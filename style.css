@@ -9,7 +9,7 @@
 }
 @media all and (orientation: landscape){
   :root{
-    --font-size: calc((3vh + 3vw) / 2.0);
+    --font-size: 3vh;
     --width-size: 28vh;
     --height-size: 8vh;
   }
@@ -26,11 +26,12 @@ body{
 
 h1{
   text-align: center;
-  font-size: calc(var(--font-size) * 2.0);
   position: relative;
+  font-size: calc(var(--font-size) * 2.0);
 }
 
 p{
+  text-align: center;
   position: relative;
   font-size: calc(var(--font-size) * 1.0);
 }
@@ -40,21 +41,35 @@ p{
 }
 
 canvas{
-  display: block;
-  vertical-align: bottom;
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-color: #000;
+  background-image: url("");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: auto;
 }
 
 #particles-js {
   position: absolute;
   width: 100%;
-  height: 100vh;
-  display: block;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
   background-color: #000;
   background-image: url("");
+  background-position: center center;
   background-repeat: no-repeat;
-  overflow: hidden;
+  background-attachment: fixed;
+  overflow: auto;
 }
 
 #comment{
@@ -98,7 +113,7 @@ footer{
 #text-file{
   position: relative;
   margin: calc(var(--width-size) * 0.5);
-  font-size: calc(var(--font-size) * 0.5);
+  font-size: calc(var(--font-size) * 1.0);
   color: #00FF00;
   text-align: center;
 }
