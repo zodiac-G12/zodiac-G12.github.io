@@ -1,9 +1,9 @@
-/* ---- particles.js config ---- */
+/* ---- particles.js confiize"" ---- */
 
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 25,
+      "value": 125,
       "density": {
         "enable": true,
         "value_area": 800
@@ -13,30 +13,30 @@ particlesJS("particles-js", {
       "value": "#00FF00"
     },
     "shape": {
-      "type": "circle",
+      "type": "polygon",
       "stroke": {
         "width": 0,
         "color": "#000000"
       },
       "polygon": {
-        "nb_sides": 5
+        "nb_sides": 4
       },
     },
     "opacity": {
-      "value": 0.5,
+      "value": 0.75,
       "random": false,
       "anim": {
         "enable": false,
         "speed": 1,
         "opacity_min": 0.1,
-        "sync": false
+        "sync": true
       }
     },
     "size": {
       "value": 25,
       "random": true,
       "anim": {
-        "enable": false,
+        "enable": true,
         "speed": 25,
         "size_min": 0.1,
         "sync": false
@@ -46,19 +46,19 @@ particlesJS("particles-js", {
       "enable": true,
       "distance": 150,
       "color": "#00FF00",
-      "opacity": 0.4,
+      "opacity": 0.8,
       "width": 1
     },
     "move": {
       "enable": true,
       "speed": 5,
       "direction": "none",
-      "random": false,
+      "random": true,
       "straight": false,
       "out_mode": "out",
       "bounce": false,
       "attract": {
-        "enable": false,
+        "enable": true,
         "rotateX": window.innerWidth,
         "rotateY": window.innerHeight
       }
@@ -103,5 +103,6 @@ particlesJS("particles-js", {
       }
     }
   },
-  "retina_detect": true
+  "retina_detect": true,
+  "resize": true
 });
