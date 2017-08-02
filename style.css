@@ -97,7 +97,6 @@ footer{
 
 #text-file{
   position: relative;
-  margin: calc(var(--width-size) * 0.5);
   font-size: calc(var(--font-size) * 1.0);
   color: #00FF00;
   text-align: center;
