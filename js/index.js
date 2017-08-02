@@ -5,9 +5,7 @@ function mama(){
     document.getElementById("enforcement").textContent = "👈可愛い";
   }
 
-  if(navigator.platform.indexOf('Win') != -1 && navigator.platform.indexOf('Mac') != 0 && navigator.platform.indexOf('Linux') != -1){
-    document.getElementById("jsadd").src = "js/app.js";
-  }else{
+  if(navigator.platform.indexOf("Win") == -1 && navigator.platform.indexOf("Mac") == -1 && navigator.platform.indexOf("Linux") == -1){
     var node = document.getElementById("particles-js");
     node.parentNode.removeChild(node);
   }
