@@ -2,14 +2,14 @@
 
 @media all and (orientation: portrait){
   :root{
-    --font-size: 3vw;
+    --font-size: calc((3vh + 3vw) / 2.0);
     --width-size: 20vw;
     --height-size: 8vw;
   }
 }
 @media all and (orientation: landscape){
   :root{
-    --font-size: 3vh;
+    --font-size: calc((3vh + 3vw) / 2.0);
     --width-size: 28vh;
     --height-size: 8vh;
   }
@@ -35,6 +35,10 @@ p{
   font-size: calc(var(--font-size) * 1.0);
 }
 
+#short{
+  font-size: calc(var(--font-size) * 0.5);
+}
+
 canvas{
   display: block;
   vertical-align: bottom;
@@ -45,7 +49,7 @@ canvas{
 #particles-js {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: block;
   background-color: #000;
   background-image: url("");
@@ -93,7 +97,7 @@ footer{
 #text-file{
   position: relative;
   margin: calc(var(--width-size) * 0.5);
-  font-size: calc(var(--font-size) * 0.8);
+  font-size: calc(var(--font-size) * 1.0);
   color: #00FF00;
   text-align: center;
 }
