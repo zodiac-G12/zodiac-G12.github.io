@@ -8,7 +8,9 @@ function mama(){
   if(navigator.platform.indexOf("Win") > -1 || navigator.platform.indexOf("Mac") > -1 || navigator.platform.indexOf("Linux") > -1){
     console.log(maman[Math.floor(Math.random()*maman.length)]);
     setTimeout(arguments.callee, 2000);
-  }else alert(navigator.platform);
+  }
+  alert(navigator.platform);
+
 }
 
 window.addEventListener('DOMContentLoaded', mama());
