@@ -5,7 +5,7 @@ function mama(){
     document.getElementById("enforcement").textContent = "👈可愛い";
   }
 
-  if(navigator.platform.indexOf("Win") || navigator.platform.indexOf("Mac") > -1 || navigator.platform.indexOf("Linux") > -1){
+  if(navigator.platform.indexOf("Win") > -1 || navigator.platform.indexOf("Mac") > -1 || navigator.platform.indexOf("Linux") > -1){
     console.log(maman[Math.floor(Math.random()*maman.length)]);
     setTimeout(arguments.callee, 2000);
   }else alert(navigator.platform);
