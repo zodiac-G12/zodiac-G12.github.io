@@ -20,8 +20,8 @@ body{
   font-family: Courier New, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
   background-color: rgba(0, 0, 0, 1);
   color: #FF8000;
-  text-shadow: 1.5px 1.5px calc(var(--font-size) * 5) #000;
   display: block;
+  text-shadow: calc(var(--font-size) / 10.0) calc(var(--font-size) / 10.0) calc(var(--font-size) / 10.0) #252525;
 }
 
 h1{
