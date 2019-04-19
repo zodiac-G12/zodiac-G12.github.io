@@ -81,31 +81,46 @@ a {
   line-height:calc(var(--glitch-font) * 0.65);
   box-sizing:border-box;
   text-align:center;
-  /* font-family:Arial Black; */
   font-size:calc(var(--glitch-font) * 0.3);
-  /* color:#FFFFFF; */
-  background-color:#FFC600;
+  background-color:#e74c3c;
   border-radius:1px;
   text-decoration: none;
-  color: var(--color-link);
+  color: #fff;
+  /* color: var(--color-link); */
   outline: none;
+  animation: bg-color 1s infinite;
+  -webkit-animation: bg-color 1s infinite;
 }
 
 a.demo {
-  animation: blink 1s linear infinite normal;
-  -webkit-animation: blink 1s linear infinite normal;
-  -moz-animation: blink 1s linear infinite normal;
-  -o-animation: blink 1s linear infinite normal;
 }
 
 a:hover{
-  animation:none;
-  -webkit-animation:none;
+  /* animation:none; */
+  /* -webkit-animation:none; */
 }
 
 a:focus {
   color: var(--color-link-hover);
   outline: none;
+}
+
+@-webkit-keyframes bg-color{
+  0% {background-color:#e74c3c;}
+  20% {background-color:#f1c40f;}
+  40% {background-color:#1abc9c;}
+  60% {background-color:#3498db;}
+  80% {background-color:#9b59b6;}
+  100% {background-color:#e74c3c;} 
+}
+
+@keyframes bg-color{
+  0% {background-color:#e74c3c;}
+  20% {background-color:#f1c40f;}
+  40% {background-color:#1abc9c;}
+  60% {background-color:#3498db;}
+  80% {background-color:#9b59b6;}
+  100% {background-color:#e74c3c;} 
 }
 
 @keyframes blink{
