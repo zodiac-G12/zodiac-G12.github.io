@@ -1,23 +1,22 @@
-#include <stdio.h>
+const main = ((n) => {
+    var i, j, k, l, flag=0, count=1; //counter
+    var n, ans; //size of matrix
 
-int main(void){
-    int i, j, k, l, flag=0, count=1; //counter
-    int n, ans; //size of matrix
-
-    puts("Please input size.(n>=3)");
-    scanf("%d",&n);
     if(n<3) return -1;
 
     //Making I_n
-    int inv[n*n][n*n];
-    int e[n*n][n*n];
-    int tmp_e[n*n]; //maybe not necessary
-    int tmp_i[n*n]; // maybe not necessary
-    int now[n*n];
+    var inv=[];
+    var e=[];
+    var tmp_e=[]; //maybe not necessary
+    var tmp_i=[]; // maybe not necessary
+    var now=[];
+
     for(i=0;i<n*n;i++){
         tmp_e[i]=0;
         tmp_i[i]=0;
         now[i]=0;
+        inv[i]=[];
+        e[i]=[];
         for(j=0;j<n*n;j++){
             if(i==j){
                 inv[i][j]=1;
@@ -37,10 +36,10 @@ int main(void){
         if(i<n*n-n)     e[i][i+n]=1;
     }
 
-    puts("E_n:");
+    process.stdout.write("E_n:\n");
     for(i=0;i<n*n;i++){
-        for(j=0;j<n*n;j++) printf("%d ", e[i][j]);
-        puts("");
+        for(j=0;j<n*n;j++) process.stdout.write(`${e[i][j]} `);
+        process.stdout.write("\n");
     }
 
     //Making inverse matrix(E_n^-1)
@@ -99,39 +98,45 @@ int main(void){
         if(flag==0) break;
     }
     if(count<100){
-        printf("count=%d",count);
-        puts("\nE_n_after:");
+        process.stdout.write(`count=${count}`);
+        process.stdout.write("\nE_n_after:\n");
         for(i=0;i<n*n;i++){
-            for(j=0;j<n*n;j++) printf("%d ", e[i][j]);
-            puts("");
+            for(j=0;j<n*n;j++) process.stdout.write(`${e[i][j]} `);
+            process.stdout.write("\n");
         }
-        puts("\nE_n^-1:");
+        process.stdout.write("\nE_n^-1:\n");
         for(i=0;i<n*n;i++){
-            for(j=0;j<n*n;j++) printf("%d ", inv[i][j]);
-            puts("");
+            for(j=0;j<n*n;j++) process.stdout.write(`${inv[i][j]} `);
+            process.stdout.write("\n");
         }
     }else{
-        puts("Maybe nothing.");
+        process.stdout.write("Maybe nothing.\n");
         return -1;
     }
 
-    printf("n=%d, count=%d\n", n, count);
-    puts("\nPlease input now.");
-    for(i=0;i<n*n;i++){
-        scanf("%d", &now[i]);
-        if(now[i]!=0 && now[i]!=1) return -1;
-    }
+    process.stdout.write(`n=${n}, count=${count}\n`);
+    process.stdout.write("\nPlease input now.\n");
+    // for(i=0;i<n*n;i++){
+    //     scanf("%d", &now[i]);
+    //     if(now[i]!=0 && now[i]!=1) return -1;
+    // }
 
-    puts("");
-    for(i=0;i<n*n;i++){
-        ans=0;
-        for(j=0;j<n*n;j++){
-            ans=(ans+(inv[i][j]*now[j])&1)&1;
-        }
-        printf("%d ", ans);
-        if((i+1)%n==0) puts("");
-    }
-    puts("");
+    // puts("");
+    // for(i=0;i<n*n;i++){
+    //     ans=0;
+    //     for(j=0;j<n*n;j++){
+    //         ans=(ans+(inv[i][j]*now[j])&1)&1;
+    //     }
+    //     process.stdout.write("${ans} ");
+    //     if((i+1)%n==0) process.stdout.write("\n");
+    // }
+    // process.stdout.write("\n");
 
     return 0;
+})
+
+
+for(var n=3,i=0,exist=[];n<30;n++){
+    if(main(n)==0) exist[i++]=n;
 }
+console.log(exist);
