@@ -16,7 +16,7 @@ var tmp_i = [];
 var now = [];
 var ans = [];
 var solved = 0;
-
+// TODO ここ変数多過ぎだし、名前変えてconstにして
 
 
 function windSize(){
@@ -29,6 +29,7 @@ function windSize(){
 function init(){
     windSize();
 
+    // TODO あたまわるそう
     if([ 3, 6, 7, 8, 10, 12, 13, 15, 22, 25, 27 ].includes(parseInt(window.location.href.split("#")[1]))){
         N=window.location.href.split("#")[1];
         console.log("N=",N);
@@ -87,7 +88,7 @@ function createCube(r,x,y,z){
 }
 
 
-
+// TODO 色は変数にした方が良いのでは？
 function cubecolorChange(obj){
     if(obj.color == 0) obj.material.color.setHex(0x353535);
     else obj.material.color.setHex(0xFF8000);
@@ -102,7 +103,7 @@ function createLight(color, x, y, z){
 }
 
 
-
+// TODO 長すぎるよ？
 function update(){
     controls.update();
     requestAnimationFrame(update);
@@ -128,6 +129,7 @@ function update(){
         }
     }
 
+    // TODO 関数にしよう
     window.onmousedown = function(e){
         if(e.target == renderer.domElement){
             var rect = e.target.getBoundingClientRect();
