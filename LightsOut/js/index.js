@@ -1,18 +1,18 @@
-var width; //window.innerWidth;
-var height; //window.innerHeight;
-var scene;
+let width; //window.innerWidth;
+let height; //window.innerHeight;
+let scene;
 var camera;
 var renderer;
 var controls;
 var cube = [];
 var cubelist = [];
-var r = 50;
+const r = 50;
 var N=3;
 var before_n=0;
 var e = [];
 var inv = [];
-var tmp_e = [];
-var tmp_i = [];
+var tmp_e;
+var tmp_i;
 var now = [];
 var ans = [];
 var solved = 0;
@@ -36,13 +36,11 @@ function init(){
     if([ 3, 6, 7, 8, 10, 12, 13, 15, 22, 25, 27 ].includes(href)){
         N=href;
     }else if(href){
-        if(href<3){
-            alert("Too smaller n. So i suggest you to play N=3.");
-        }else if(href>30){
-            alert("Too bigger n. So i suggest you to play N=3.");
-        }else{
-            alert("Maybe can't solve in n. So i suggest you to play N=3.");
-        }
+        let message;
+        if(href<3) message = "Too smaller n. So i suggest you to play N=3.";
+        else if(href>30) message = "Too bigger n. So i suggest you to play N=3.";
+        else message = "Maybe can't solve in n. So i suggest you to play N=3.";
+        alert(message);
         N=3;
     }
     zure=parseInt(N/2);
@@ -51,7 +49,7 @@ function init(){
     camera = new THREE.PerspectiveCamera(100, width / height, 1, 1000);
     controls = new THREE.OrbitControls(camera);
     controls.autoRotate = false;//true;
-    renderer = createRenderer(width, height);
+    renderer = createRenderer();
     for(var i = -zure; i < N-zure; i++){
         cube[i+zure] = [];
         for(var j = -zure; j < N-zure; j++){
@@ -75,7 +73,7 @@ function init(){
 
 
 
-function createRenderer(width, height){
+function createRenderer(){
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
     renderer.setClearColor(0xFFFFFF, 1);
@@ -131,6 +129,59 @@ function cubeSpin(){
 
 
 
+function cubeStop(){
+    for(var i=0;i<N;i++){
+        for(var j=0;j<N;j++){
+            cube[i][j].rotation.y=0;
+        }
+    }
+}
+
+
+
+function buttonAction(){
+    document.getElementById("solve-btn").onclick = function(){
+        var sentence = 'If you want to solve this ploblem, when you click to the spinning cube, you will solve.';
+
+        if(document.getElementById('solve-on').innerHTML) document.getElementById('solve-on').innerHTML="";
+        else document.getElementById('solve-on').innerHTML=sentence;
+    };
+}
+
+
+
+function preSolve(){
+    if(solved==0){
+        for(var i=0;i<N;i++){
+            for(var j=0;j<N;j++) now[i*N+j]=cube[i][j].color;
+        }
+        solved=solver(N);
+        solved=1;
+    }
+}
+
+
+
+function lightsOut(take_x, take_y){
+    for(var i = 0; i < 2; i++){
+        for(var j = -1; j < 2; j++){
+            var flag = 0;
+            var x = take_x;
+            var y = take_y;
+            if(i == 0 && j != 0){x += j; flag = 1;}
+            else if(i != 0){y += j; flag = 1;}
+            if(flag == 1 && 0 <= x && x <= N-1 && 0 <= y && y <= N-1){
+                var centerC = cube[x][y];
+                centerC.color = ~centerC.color&1;
+                cubecolorChange(centerC);
+            }
+        }
+    }
+    if(solved==1) solved=0;
+}
+
+
+
 // TODO 長すぎるよ？
 function update(){
     controls.update();
@@ -139,33 +190,12 @@ function update(){
     var projector = new THREE.Projector();
     var mouse = {x: 0, y: 0};
 
-    if(solved==0){
-        for(var i=0;i<N;i++){
-            for(var j=0;j<N;j++) now[i*N+j]=cube[i][j].color;
-        }
-        solved=solver(N);
-        solved=1;
-    }
+    preSolve();
 
-    //buttonだし、めちゃくちゃ関数別にしようぜ、あ〜たまらねえぜ。一緒に関数まみれになろうや。
-    document.getElementById("solve-btn").onclick = function(){
-        var sentence = 'If you want to solve this ploblem, when you click to the spinning cube, you will solve.';
-        if(document.getElementById('solve-on').innerHTML){
-            document.getElementById('solve-on').innerHTML="";
-        }else{
-            document.getElementById('solve-on').innerHTML=sentence;
-        }
-    };
+    buttonAction();
 
-    if(document.getElementById('solve-on').innerHTML){
-        cubeSpin();
-    }else{
-        for(var i=0;i<N;i++){
-            for(var j=0;j<N;j++){
-                cube[i][j].rotation.y=0;
-            }
-        }
-    }
+    if(document.getElementById('solve-on').innerHTML) cubeSpin();
+    else cubeStop();
 
     // TODO 関数にしよう
     window.onmousedown = function(e){
@@ -180,23 +210,8 @@ function update(){
             var ray = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
             var obj = ray.intersectObjects(cubelist);
             if(obj.length > 0){
-                var tmp = [obj[0].object.mapx,obj[0].object.mapy];
-                for(var i = 0; i < 2; i++){
-                    for(var j = -1; j < 2; j++){
-                        var flag = 0;
-                        var x = tmp[0];
-                        var y = tmp[1];
-                        if(i == 0 && j != 0){x += j; flag = 1;}
-                        else if(i != 0){y += j; flag = 1;}
-                        if(flag == 1 && 0 <= x && x <= N-1 && 0 <= y && y <= N-1){
-                            var centerC = cube[x][y];
-                            centerC.color = ~centerC.color&1;
-                            cubecolorChange(centerC);
-                        }
-                    }
-                }
-                if(solved==1) solved=0;
-            }else controls.autoRotate = !controls.autoRotate;
+                lightsOut(obj[0].object.mapx,obj[0].object.mapy);
+            }//else controls.autoRotate = !controls.autoRotate;
         }
     };
 }
@@ -206,23 +221,16 @@ function update(){
 function solver(n){
     var i, j, k, l, flag=0, count=1; //counter
 
-    if(n<3) return -1;
+    if(n<3) return -1; // ツマランからエラー
     for(i=0;i<n*n;i++) ans[i]=0;
 
     if(before_n!=n){
         for(i=0;i<n*n;i++){
-            tmp_e[i]=0;
-            tmp_i[i]=0;
             inv[i]=[];
             e[i]=[];
             for(j=0;j<n*n;j++){
-                if(i==j){
-                    inv[i][j]=1;
-                    e[i][j]=1;
-                }else{
-                    inv[i][j]=0;
-                    e[i][j]=0;
-                }
+                inv[i][j] = i==j ? 1 : 0;
+                e[i][j] = i==j ? 1 : 0;
             }
         }
 
@@ -269,14 +277,9 @@ function solver(n){
             }
             for(i=0;i<n*n;i++){
                 if(e[i][i]!=1&&i!=n*n-1){
-                    for(l=0;l<n*n;l++){
-                        //しゃろうとか、でぃーぷとか、そんなの、ひとのかって。
-                        tmp_e[l]=JSON.parse(JSON.stringify(e[i][l]));
-                        tmp_i[l]=JSON.parse(JSON.stringify(inv[i][l]));
-                        e[i][l]=JSON.parse(JSON.stringify(e[i+1][l]));
-                        inv[i][l]=JSON.parse(JSON.stringify(inv[i+1][l]));
-                        e[i+1][l]=JSON.parse(JSON.stringify(tmp_e[l]));
-                        inv[i+1][l]=JSON.parse(JSON.stringify(tmp_i[l]));
+                    for(l=0;l<n*n;l++){ // swap
+                        e[i][l]=[e[i+1][l],e[i+1][l]=e[i][l]][0];
+                        inv[i][l]=[inv[i+1][l],inv[i+1][l]=inv[i][l]][0];
                     }
                 }
             }
@@ -307,12 +310,13 @@ function solver(n){
     }
     for(i=0;i<n;i++){
         for(j=0;j<n;j++){
-            cube[i][j].ans=JSON.parse(JSON.stringify(ans[i*n+j]));
+            cube[i][j].ans=ans[i*n+j];
         }
     }
 
     return 1;
 }
+
 
 
 window.addEventListener('DOMContentLoaded', init);
