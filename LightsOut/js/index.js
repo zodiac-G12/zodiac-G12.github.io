@@ -18,6 +18,13 @@ var ans = [];
 var solved = 0;
 var zure;
 var href;
+const lights =
+[
+    ["0xFFFFFF", 0, 1000, 0],
+    ["0xFFFFFF", 500, 1000, 1000],
+    ["0xFFFFFF", -500, 1000, -1000]
+];
+
 // TODO ここ変数多過ぎだし、名前変えてconstにして
 
 
@@ -57,16 +64,16 @@ function init(){
             cubelist[N*(i+zure)+j+zure] = cube[i+zure][j+zure];
         }
     }
-    var light1 = createLight(0xFFFFFF, 0, 1000, 0);
-    var light2 = createLight(0xFFFFFF, 500, 1000, 1000);
-    var light3 = createLight(0xFFFFFF, -500, 1000, -1000);
-    camera.position.x = 0;
-    camera.position.y = 0;
-    camera.position.z = 200;
+
+    for (const [key, value] of Object.entries({x:0,y:0,z:200})) {
+        camera.position[key] = value;
+    }
+
     camera.lookAt(new THREE.Vector3(0, 0, 0));
-    scene.add(light1);
-    scene.add(light2);
-    scene.add(light3);
+
+    lights.forEach((values) => {
+        scene.add(createLight(values[0], values[1], values[2], values[3]));
+    });
 
     update();
 }
@@ -89,7 +96,7 @@ function createCube(r,x,y,z){
     var material = new THREE.MeshPhongMaterial({color: (color == 0 ? 0x353535 : 0xFF8000)});
     var cube = new THREE.Mesh(geometry, material);
     cube.color = color;
-    var centerring = N%2!=0? 0 : r/2;
+    var centerring = N%2!=0 ? 0 : r/2;
     cube.position.set(x*(r+10)+centerring, y*(r+10)+centerring, z);
     cube.mapx = x+zure;
     cube.mapy = y+zure;
@@ -117,12 +124,9 @@ function createLight(color, x, y, z){
 
 
 function cubeSpin(){
-    // TODO 色も変えられたら.点滅とか.
     for(var i=0;i<N;i++){
         for(var j=0;j<N;j++){
-            if(cube[i][j].ans==1){
-                cube[i][j].rotation.y+=0.05;
-            }
+            cube[i][j].rotation.y=cube[i][j].ans==1?cube[i][j].rotation.y+0.05:0;
         }
     }
 }
@@ -295,7 +299,7 @@ function solver(n){
         }
 
         if(count<500){
-            console.log("Exist.\n");
+            console.log(count,"Exist.\n");
         }else{
             console.log("Maybe nothing.\n");
             return -1;
