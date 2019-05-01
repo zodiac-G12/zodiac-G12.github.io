@@ -89,6 +89,14 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
     outline: none;
   }
 
+  /* TODO */
+  .skelton{
+    user-select: none;
+    font-size: calc(var(--glitch-font) * 0.1); 
+    margin-top: calc(var(--glitch-font) * -0.1);
+    color: rgba(0,0,0,0);
+  }
+
   .button1{
     animation: bg-color 1s infinite;
     -webkit-animation: bg-color-one 0.9s infinite;
