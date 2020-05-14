@@ -1,0 +1,24 @@
+{
+  "name": "zodiac-G12.github.io",
+  "version": "1.0.0",
+  "description": "My shining Nuxt.js project",
+  "author": "zodiac-G12",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "build:master": "DEPLOY_ENV=MASTER nuxt build",
+    "generate:master": "DEPLOY_ENV=MASTER nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=master --verbose --cleanup",
+    "clear-hard-source-cache": "rm -rf node_modules/.cache/hard-source/"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "push-dir": "^0.4.1"
+  }
+}
