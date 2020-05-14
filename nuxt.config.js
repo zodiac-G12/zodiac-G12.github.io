@@ -6,7 +6,7 @@ export default {
      */
     head: {
         title: process.env.npm_package_name || '',
-        titleTemplate: 'CYBER LAB',
+        titleTemplate: 'ZODIAC APOCALYPSE',
         htmlAttrs: {
             prefix: 'og: http://ogp.me/ns#',
             lang: 'ja'
