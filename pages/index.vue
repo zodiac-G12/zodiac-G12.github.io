@@ -1,66 +1,75 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        zodiac-G12.github.io
-      </h1>
-      <h2 class="subtitle">
-        My shining Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+    <div class="container">
+        <Header />
+        <h1 class="title">
+            zodiac-G12.github.io
+        </h1>
+        <h2 class="subtitle">
+            Wellcome to my homepage
+        </h2>
+        <div class="links">
+            <a
+                href="https://zodiac-g12.github.io/creation/description.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button--green"
+                >
+                Portfolio
+            </a>
+            <a
+                href="https://github.com/zodiac-G12"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button--grey"
+                >
+                GitHub
+            </a>
+            <a
+                href="https://zodiac-g12.github.io/blog/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button--indigo"
+                >
+                Blog
+            </a>
+        </div>
+        <footer class="subtitle" style="position:absolute;font-size:90%;bottom:5vh;left:0;right:0;margin: auto;">© ZODIAC-G12 2020</footer> 
     </div>
-  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+const Header = () => import('~/components/header.vue');
 
 export default {
   components: {
-    Logo
+    Header
   }
 }
 </script>
 
 <style>
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 5vh;
+  display: block;
+  /* justify-content: center; */
+  /* align-items: center; */
   text-align: center;
 }
 
 .title {
+  margin-top: 5vh;
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 140%;
   color: #35495e;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 120%;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
