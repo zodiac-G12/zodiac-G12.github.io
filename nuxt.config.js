@@ -51,7 +51,34 @@ export default {
      ** Nuxt.js modules
      */
     modules: [
+        '@nuxtjs/pwa',
     ],
+    manifest: {
+        short_name: "ZODIAC HP",
+        name: "ZODIAC HOMEPAGE",
+        icons: [
+            {
+                src: "favicon.ico",
+                sizes: "64x64 32x32 24x24 16x16",
+                type: "image/x-icon"
+            },
+            {
+                "src": "nuxt-icon192.png",
+                "type": "image/png",
+                "sizes": "192x192"
+            },
+            {
+                "src": "nuxt-icon512.png",
+                "type": "image/png",
+                "sizes": "512x512"
+            }
+        ],
+        start_url: ".",
+        display: "standalone",
+        theme_color: "#000000",
+        background_color: "#ffffff",
+        lang: 'ja',
+    },
     /*
      ** Build configuration
      */
