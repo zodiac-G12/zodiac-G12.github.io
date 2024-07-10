@@ -1,4 +1,4 @@
-import { Avator, Introduce } from '~/components/parts';
+import { Avator, Introduce } from "~/components/parts";
 
 export const Profile = () => {
   return (

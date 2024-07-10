@@ -1,4 +1,4 @@
-import { Profile, Domain, Program, Contact } from '~/components/templates';
+import { Profile, Domain, Program, Contact } from "~/components/templates";
 
 export default function Home() {
   return (

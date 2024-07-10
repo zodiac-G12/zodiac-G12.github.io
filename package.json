@@ -1,12 +1,20 @@
 {
-  "name": "example-with-tailwindcss",
+  "name": "zodiac homepage",
+  "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "pnpm": "9.5.x",
+    "node": "20.x"
+  },
   "scripts": {
+    "prepare": "husky",
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",
     "serve": "serve .output/public",
-    "docs": "cp -rf .output/public docs"
+    "lint-staged": "lint-staged",
+    "format": "biome format --write ./src",
+    "lint": "biome lint ./src"
   },
   "dependencies": {
     "@solidjs/router": "^0.14.1",
@@ -17,10 +25,13 @@
     "tailwindcss": "^3.4.3",
     "vinxi": "^0.3.12"
   },
-  "engines": {
-    "node": ">=18"
+  "lint-staged": {
+    "*.{js,json,md,yml,ts,tsx,jsx,css,scss}": ["pnpm format", "pnpm lint"]
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "serve": "^14.2.3"
   }
 }
