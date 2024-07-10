@@ -1,7 +1,7 @@
 name: CI
 
 on:
-  push:
+  pull_request:
     branches: [ master ]
 
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
       - name: build
         run: npm run build
         env:
-          BASE_PATH: /
+          BASE_PATH: /demo/
 
       - name: create .nojekyll
         run: touch .output/public/.nojekyll
