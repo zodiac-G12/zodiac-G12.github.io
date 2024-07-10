@@ -1,0 +1,78 @@
+{
+  "_web-DhmFOCb8.js": {
+    "file": "assets/web-DhmFOCb8.js",
+    "name": "web"
+  },
+  "src/assets/blog.png": {
+    "file": "assets/blog-D5gNVAIv.png",
+    "src": "src/assets/blog.png"
+  },
+  "src/assets/figma.webp": {
+    "file": "assets/figma-DmTJe02N.webp",
+    "src": "src/assets/figma.webp"
+  },
+  "src/assets/nest.svg": {
+    "file": "assets/nest-DvMlb-09.svg",
+    "src": "src/assets/nest.svg"
+  },
+  "src/assets/prisma.png": {
+    "file": "assets/prisma-BjcdfHwy.png",
+    "src": "src/assets/prisma.png"
+  },
+  "src/assets/python.png": {
+    "file": "assets/python-Bt12VGEE.png",
+    "src": "src/assets/python.png"
+  },
+  "src/assets/ruby.png": {
+    "file": "assets/ruby-BewK04dW.png",
+    "src": "src/assets/ruby.png"
+  },
+  "src/assets/rust.png": {
+    "file": "assets/rust-CKGKRL8K.png",
+    "src": "src/assets/rust.png"
+  },
+  "src/assets/three.png": {
+    "file": "assets/three-jYXn_yYP.png",
+    "src": "src/assets/three.png"
+  },
+  "src/assets/typescript.png": {
+    "file": "assets/typescript-CTf4tr6I.png",
+    "src": "src/assets/typescript.png"
+  },
+  "src/routes/index.tsx?pick=default&pick=$css": {
+    "file": "assets/index-C29AcyNV.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-DhmFOCb8.js"
+    ],
+    "assets": [
+      "assets/typescript-CTf4tr6I.png",
+      "assets/nest-DvMlb-09.svg",
+      "assets/prisma-BjcdfHwy.png",
+      "assets/three-jYXn_yYP.png",
+      "assets/ruby-BewK04dW.png",
+      "assets/python-Bt12VGEE.png",
+      "assets/rust-CKGKRL8K.png",
+      "assets/figma-DmTJe02N.webp",
+      "assets/blog-D5gNVAIv.png"
+    ]
+  },
+  "virtual:$vinxi/handler/client": {
+    "file": "assets/client-BzOZGahl.js",
+    "name": "client",
+    "src": "virtual:$vinxi/handler/client",
+    "isEntry": true,
+    "imports": [
+      "_web-DhmFOCb8.js"
+    ],
+    "dynamicImports": [
+      "src/routes/index.tsx?pick=default&pick=$css"
+    ],
+    "css": [
+      "assets/client-0BtBJRz1.css"
+    ]
+  }
+}
