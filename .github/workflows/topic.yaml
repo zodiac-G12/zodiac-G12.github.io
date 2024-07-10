@@ -18,7 +18,7 @@ jobs:
       - name: build
         run: npm run build
         env:
-          BASE_PATH: /demo/
+          BASE_PATH: /
 
       - name: create .nojekyll
         run: touch .output/public/.nojekyll
@@ -28,3 +28,4 @@ jobs:
         with:
           branch: gh-pages
           folder: .output/public
+          repository-name: demo
