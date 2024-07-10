@@ -1,11 +1,34 @@
-# STATIC
+# Project Name
 
-**This directory is not required, you can delete it if you don't want to use it.**
+This is the repository for our homepage, which is built using SolidJS.
 
-This directory contains your static files.
-Each file inside this directory is mapped to `/`.
-Thus you'd want to delete this README.md before deploying to production.
+## Getting Started
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+To get started with the development, you will need to have Node.js installed. You can then clone the repository and install the dependencies.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/assets#static).
+```sh
+git clone https://github.com/zodiac-G12/zodiac-G12.github.io.git
+cd zodiac-G12.github.io
+pnpm i
+```
+
+## Running the Project
+
+You can start the development server using the following command:
+
+```sh
+pnpm run dev
+```
+
+## Building the Project
+
+To create a production build, you can use:
+
+```sh
+pnpm run build
+```
+
+## Learn More
+
+To learn more about SolidJS, you can visit the [official documentation](https://solidjs.com/docs).
+
