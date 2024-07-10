@@ -1,7 +1,7 @@
-import GitHubLogo from '~/assets/github.svg';
-import XLogo from '~/assets/x.svg';
-import DiscordLogo from '~/assets/discord.svg';
-import BlogLogo from '~/assets/blog.png';
+import GitHubLogo from "~/assets/github.svg";
+import XLogo from "~/assets/x.svg";
+import DiscordLogo from "~/assets/discord.svg";
+import BlogLogo from "~/assets/blog.png";
 
 export const CONTACTS: {
   href: string;
@@ -9,23 +9,23 @@ export const CONTACTS: {
   text: string;
 }[] = [
   {
-    href: 'https://github.com/zodiac-G12',
+    href: "https://github.com/zodiac-G12",
     img: GitHubLogo,
-    text: 'GitHub',
+    text: "GitHub",
   },
   {
-    href: 'https://x.com/zodi_G12',
+    href: "https://x.com/zodi_G12",
     img: XLogo,
-    text: 'X',
+    text: "X",
   },
   {
-    href: 'https://discord.gg/nFDJe3v4dZ',
+    href: "https://discord.gg/nFDJe3v4dZ",
     img: DiscordLogo,
-    text: 'Discord',
+    text: "Discord",
   },
   {
-    href: 'https://zodiac-g12.github.io/blog/',
+    href: "https://zodiac-g12.github.io/blog/",
     img: BlogLogo,
-    text: 'Blog'
+    text: "Blog",
   },
 ];

@@ -1,3 +1,3 @@
-export * from './domains';
-export * from './programs';
-export * from './contacts';
+export * from "./domains";
+export * from "./programs";
+export * from "./contacts";

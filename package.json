@@ -13,7 +13,8 @@
     "start": "vinxi start",
     "serve": "serve .output/public",
     "lint-staged": "lint-staged",
-    "format": "prettier-eslint --write \"**/*.{js,json,md,yml,ts,tsx,jsx,css,scss}\""
+    "format": "biome format --write ./src",
+    "lint": "biome lint ./src"
   },
   "dependencies": {
     "@solidjs/router": "^0.14.1",
@@ -25,13 +26,12 @@
     "vinxi": "^0.3.12"
   },
   "lint-staged": {
-    "*.{js,json,md,yml,ts,tsx,jsx,css,scss}": "pnpm format"
+    "*.{js,json,md,yml,ts,tsx,jsx,css,scss}": ["pnpm format", "pnpm lint"]
   },
   "devDependencies": {
-    "prettier-eslint": "^15.0.1",
-    "prettier-eslint-cli": "^7.1.0",
-    "lint-staged": "^13.2.3",
+    "@biomejs/biome": "1.8.3",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "serve": "^14.2.3"
   }
 }
