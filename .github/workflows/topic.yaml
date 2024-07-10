@@ -28,4 +28,4 @@ jobs:
         with:
           branch: gh-pages
           folder: .output/public
-          repository-name: demo
+          repository-name: zodiac-G12/demo
