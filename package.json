@@ -4,7 +4,8 @@
   "type": "module",
   "engines": {
     "pnpm": "9.5.x",
-    "node": "20.x"
+    "npm": ">=10.7.0",
+    "node": ">=18.20.x"
   },
   "scripts": {
     "prepare": "husky",
