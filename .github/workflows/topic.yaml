@@ -1,4 +1,4 @@
-name: CI
+name: topic-ci
 
 on:
   pull_request:
@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  Lint:
+    run-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
@@ -17,6 +17,14 @@ jobs:
 
       - name: lint
         run: npm run lint
+
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: install
+        run: npm i --legacy-peer-deps
 
       - name: build
         run: npm run build
@@ -32,4 +40,4 @@ jobs:
           # ACCESS_TOKEN: ${{ secrets.DEMO_REPO_ACCESS_TOKEN }}
           branch: gh-pages
           folder: .output/public
-          repository-name: zodiac-G12/demo
+          # repository-name: zodiac-G12/demo
