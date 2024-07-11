@@ -1,0 +1,68 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "timezone": "Asia/Tokyo",
+  "schedule": [
+    "after 7pm every weekday",
+    "before 9am every weekday",
+    "every weekend"
+  ],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 5,
+  "updateNotScheduled": false,
+  "major": {
+    "automerge": false
+  },
+  "lockFileMaintenance": {
+    "automerge": true
+  },
+  "minor": {
+    "automerge": true
+  },
+  "patch": {
+    "automerge": true
+  },
+  "pin": {
+    "automerge": true
+  },
+  "digest": {
+    "automerge": true
+  },
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "groupName": "solidjs",
+      "matchPackageNames": ["solid-js"],
+      "matchPackagePrefixes": ["solid", "@solidjs"]
+    },
+    {
+      "groupName": "tailwind",
+      "matchPackageNames": ["tailwindcss"],
+      "matchPackagePrefixes": ["tailwind"]
+    },
+    {
+      "groupName": "vinxi",
+      "matchPackageNames": ["vinxi"],
+      "matchPackagePrefixes": ["vinxi"]
+    },
+    {
+      "groupName": "autoprefixer",
+      "matchPackageNames": ["autoprefixer"],
+      "matchPackagePrefixes": ["autoprefixer"]
+    },
+    {
+      "groupName": "postcss",
+      "matchPackageNames": ["postcss"],
+      "matchPackagePrefixes": ["postcss"]
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["(^|/)\\.node-version$"],
+      "matchStrings": ["^(?<currentValue>\\d+\\.\\d+\\.\\d+)$"],
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "nodejs/node",
+      "versioningTemplate": "semver"
+    }
+  ]
+}
