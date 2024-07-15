@@ -24,7 +24,7 @@ export const CONTACTS: {
     text: "Discord",
   },
   {
-    href: "https://zodiac-g12.github.io/blog/",
+    href: "https://zodiac-g12.github.io/flog/",
     img: BlogLogo,
     text: "Blog",
   },
