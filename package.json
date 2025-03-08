@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@tailwindcss/postcss": "^4.0.12",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "serve": "^14.2.4"
