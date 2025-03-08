@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background-rgb: 255, 255, 255;
-  --foreground-rgb: 24, 24, 24;
+  --background-rgb: 24, 24, 24;
+  --foreground-rgb: 255, 255, 255;
   --glitch-font: 9vw;
   --glitch-font-margin: 20vw;
   --color-text: #fff;
   --color-bg: #000;
-  --color-link: #FF8C00;
+  --color-link: #ff8c00;
   --color-link-hover: #aaa;
-  --color-info: #FF8C00;
+  --color-info: #ff8c00;
   --gap-horizontal: 10px;
   --gap-vertical: 5px;
   --color-title: #fff;
@@ -27,13 +27,6 @@
   --blend-color-3: transparent;
   --blend-color-4: #fb909a;
   --blend-color-5: #1c1cc9;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-rgb: 24, 24, 24;
-    --foreground-rgb: 255, 255, 255;
-  }
 }
 
 body {
@@ -53,18 +46,19 @@ body {
   left: calc(-1 * var(--gap-horizontal));
   width: calc(100% + 1 * var(--gap-horizontal));
   height: calc(100% + 1 * var(--gap-horizontal));
-  background: url(https://avatars1.githubusercontent.com/u/12181838?s=460&av=4) no-repeat 50% 0;
+  background: url(https://avatars1.githubusercontent.com/u/12181838?s=460&av=4)
+    no-repeat 50% 0;
   background-color: var(--blend-color-1);
   background-size: cover;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
   background-blend-mode: var(--blend-mode-1);
 }
 
-.glitch__img:nth-child(n+2) {
+.glitch__img:nth-child(n + 2) {
   opacity: 0;
 }
 
-.glitch__img:nth-child(n+2) {
+.glitch__img:nth-child(n + 2) {
   animation-duration: var(--time-anim);
   animation-delay: var(--delay-anim);
   animation-timing-function: linear;
@@ -98,9 +92,9 @@ body {
 /* Animations */
 
 @keyframes glitch-anim-1 {
-  0% { 
+  0% {
     opacity: 1;
-    transform: translate3d(var(--gap-horizontal),0,0);
+    transform: translate3d(var(--gap-horizontal), 0, 0);
     -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
     clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
   }
@@ -146,20 +140,21 @@ body {
   }
   21.9% {
     opacity: 1;
-    transform: translate3d(var(--gap-horizontal),0,0);
+    transform: translate3d(var(--gap-horizontal), 0, 0);
   }
-  22%, 100% {
+  22%,
+  100% {
     opacity: 0;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
   }
 }
 
 @keyframes glitch-anim-2 {
-  0% { 
+  0% {
     opacity: 1;
-    transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0);
+    transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0);
     -webkit-clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
     clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
   }
@@ -205,20 +200,22 @@ body {
   }
   21.9% {
     opacity: 1;
-    transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0);
+    transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0);
   }
-  22%, 100% {
+  22%,
+  100% {
     opacity: 0;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
   }
 }
 
 @keyframes glitch-anim-3 {
-  0% { 
+  0% {
     opacity: 1;
-    transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1,-1,1);
+    transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0)
+      scale3d(-1, -1, 1);
     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
     clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
   }
@@ -296,11 +293,13 @@ body {
   }
   21.9% {
     opacity: 1;
-    transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1,-1,1);
+    transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0)
+      scale3d(-1, -1, 1);
   }
-  22%, 100% {
+  22%,
+  100% {
     opacity: 0;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
   }
@@ -308,11 +307,13 @@ body {
 
 /* Flash */
 @keyframes glitch-anim-flash {
-  0%, 5% { 
-    opacity: 0.2; 
+  0%,
+  5% {
+    opacity: 0.2;
     transform: translate3d(var(--gap-horizontal), var(--gap-vertical), 0);
   }
-  5.5%, 100% {
+  5.5%,
+  100% {
     opacity: 0;
     transform: translate3d(0, 0, 0);
   }
