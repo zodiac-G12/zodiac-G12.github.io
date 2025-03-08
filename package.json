@@ -4,9 +4,9 @@
   "type": "module",
   "engines": {
     "pnpm": "10.6.x",
-    "npm": "dont use",
+    "npm": ">=10.8.x",
     "yarn": "dont use",
-    "node": ">=22.14.x"
+    "node": ">=20.18.x"
   },
   "scripts": {
     "prepare": "husky",
