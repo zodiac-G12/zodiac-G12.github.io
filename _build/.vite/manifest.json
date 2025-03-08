@@ -1,6 +1,6 @@
 {
-  "_web-DhmFOCb8.js": {
-    "file": "assets/web-DhmFOCb8.js",
+  "_web-DEzZftNo.js": {
+    "file": "assets/web-DEzZftNo.js",
     "name": "web"
   },
   "src/assets/blog.png": {
@@ -40,13 +40,13 @@
     "src": "src/assets/typescript.png"
   },
   "src/routes/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-FBsR3FNN.js",
+    "file": "assets/index-BlzRSo7u.js",
     "name": "index",
     "src": "src/routes/index.tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_web-DhmFOCb8.js"
+      "_web-DEzZftNo.js"
     ],
     "assets": [
       "assets/typescript-CTf4tr6I.png",
@@ -61,18 +61,18 @@
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-BC_kWaxA.js",
+    "file": "assets/client-Z4xKiwwA.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
     "imports": [
-      "_web-DhmFOCb8.js"
+      "_web-DEzZftNo.js"
     ],
     "dynamicImports": [
       "src/routes/index.tsx?pick=default&pick=$css"
     ],
     "css": [
-      "assets/client-BDeO-rt1.css"
+      "assets/client-BU0BFDKl.css"
     ]
   }
 }
