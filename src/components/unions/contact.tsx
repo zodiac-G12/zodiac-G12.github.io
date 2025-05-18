@@ -10,6 +10,7 @@ export const Contact = () => {
           <ButtonLink
             href={contact.href}
             img={contact.img}
+            webp={contact.webp}
             text={contact.text}
           />
         ))}
