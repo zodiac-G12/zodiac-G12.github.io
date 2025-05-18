@@ -1,78 +1,188 @@
 {
-  "_web-DEzZftNo.js": {
-    "file": "assets/web-DEzZftNo.js",
+  "_web-BJwamogC.js": {
+    "file": "assets/web-BJwamogC.js",
     "name": "web"
   },
   "src/assets/blog.png": {
     "file": "assets/blog-D5gNVAIv.png",
     "src": "src/assets/blog.png"
   },
+  "src/assets/blog.webp": {
+    "file": "assets/blog-u6osIEZg.webp",
+    "src": "src/assets/blog.webp"
+  },
+  "src/assets/discord.png": {
+    "file": "assets/discord-CX2OhRgF.png",
+    "src": "src/assets/discord.png"
+  },
+  "src/assets/discord.webp": {
+    "file": "assets/discord-BH54bPXc.webp",
+    "src": "src/assets/discord.webp"
+  },
+  "src/assets/docker.png": {
+    "file": "assets/docker-lBLxQb-6.png",
+    "src": "src/assets/docker.png"
+  },
+  "src/assets/docker.webp": {
+    "file": "assets/docker-DlsrmhJT.webp",
+    "src": "src/assets/docker.webp"
+  },
+  "src/assets/figma.png": {
+    "file": "assets/figma-CeLBO0UL.png",
+    "src": "src/assets/figma.png"
+  },
   "src/assets/figma.webp": {
-    "file": "assets/figma-DmTJe02N.webp",
+    "file": "assets/figma-DLF-m7dJ.webp",
     "src": "src/assets/figma.webp"
   },
-  "src/assets/nest.svg": {
-    "file": "assets/nest-DvMlb-09.svg",
-    "src": "src/assets/nest.svg"
+  "src/assets/github.png": {
+    "file": "assets/github-CPsrTaSh.png",
+    "src": "src/assets/github.png"
+  },
+  "src/assets/github.webp": {
+    "file": "assets/github-Bkv7RHyx.webp",
+    "src": "src/assets/github.webp"
+  },
+  "src/assets/haskell.png": {
+    "file": "assets/haskell-CspQsDzM.png",
+    "src": "src/assets/haskell.png"
+  },
+  "src/assets/haskell.webp": {
+    "file": "assets/haskell-C-wH2uyN.webp",
+    "src": "src/assets/haskell.webp"
+  },
+  "src/assets/miro.png": {
+    "file": "assets/miro-B0lVoR5x.png",
+    "src": "src/assets/miro.png"
+  },
+  "src/assets/nest.png": {
+    "file": "assets/nest-YXXqVwB9.png",
+    "src": "src/assets/nest.png"
+  },
+  "src/assets/nest.webp": {
+    "file": "assets/nest-B0v8jJRB.webp",
+    "src": "src/assets/nest.webp"
   },
   "src/assets/prisma.png": {
     "file": "assets/prisma-BjcdfHwy.png",
     "src": "src/assets/prisma.png"
   },
+  "src/assets/prisma.webp": {
+    "file": "assets/prisma-dBwGTT-g.webp",
+    "src": "src/assets/prisma.webp"
+  },
   "src/assets/python.png": {
     "file": "assets/python-Bt12VGEE.png",
     "src": "src/assets/python.png"
+  },
+  "src/assets/python.webp": {
+    "file": "assets/python-Dcl87Hf0.webp",
+    "src": "src/assets/python.webp"
+  },
+  "src/assets/react.png": {
+    "file": "assets/react-D2n9e_kS.png",
+    "src": "src/assets/react.png"
+  },
+  "src/assets/react.webp": {
+    "file": "assets/react-Cal_Zw8K.webp",
+    "src": "src/assets/react.webp"
   },
   "src/assets/ruby.png": {
     "file": "assets/ruby-BewK04dW.png",
     "src": "src/assets/ruby.png"
   },
+  "src/assets/ruby.webp": {
+    "file": "assets/ruby-0BrGamWS.webp",
+    "src": "src/assets/ruby.webp"
+  },
   "src/assets/rust.png": {
     "file": "assets/rust-CKGKRL8K.png",
     "src": "src/assets/rust.png"
+  },
+  "src/assets/rust.webp": {
+    "file": "assets/rust-D4t0Lymg.webp",
+    "src": "src/assets/rust.webp"
+  },
+  "src/assets/solid.png": {
+    "file": "assets/solid-DpA-F_gS.png",
+    "src": "src/assets/solid.png"
   },
   "src/assets/three.png": {
     "file": "assets/three-jYXn_yYP.png",
     "src": "src/assets/three.png"
   },
+  "src/assets/three.webp": {
+    "file": "assets/three-CJDQQ3u-.webp",
+    "src": "src/assets/three.webp"
+  },
   "src/assets/typescript.png": {
     "file": "assets/typescript-CTf4tr6I.png",
     "src": "src/assets/typescript.png"
   },
+  "src/assets/typescript.webp": {
+    "file": "assets/typescript-CG5NEbiU.webp",
+    "src": "src/assets/typescript.webp"
+  },
+  "src/assets/x.png": {
+    "file": "assets/x-CYuNpUEq.png",
+    "src": "src/assets/x.png"
+  },
   "src/routes/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-BlzRSo7u.js",
+    "file": "assets/index-AowEULCQ.js",
     "name": "index",
     "src": "src/routes/index.tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_web-DEzZftNo.js"
+      "_web-BJwamogC.js"
     ],
     "assets": [
       "assets/typescript-CTf4tr6I.png",
-      "assets/nest-DvMlb-09.svg",
+      "assets/nest-YXXqVwB9.png",
       "assets/prisma-BjcdfHwy.png",
+      "assets/react-D2n9e_kS.png",
+      "assets/solid-DpA-F_gS.png",
       "assets/three-jYXn_yYP.png",
       "assets/ruby-BewK04dW.png",
       "assets/python-Bt12VGEE.png",
+      "assets/haskell-CspQsDzM.png",
       "assets/rust-CKGKRL8K.png",
-      "assets/figma-DmTJe02N.webp",
-      "assets/blog-D5gNVAIv.png"
+      "assets/docker-lBLxQb-6.png",
+      "assets/miro-B0lVoR5x.png",
+      "assets/figma-CeLBO0UL.png",
+      "assets/github-CPsrTaSh.png",
+      "assets/typescript-CG5NEbiU.webp",
+      "assets/nest-B0v8jJRB.webp",
+      "assets/prisma-dBwGTT-g.webp",
+      "assets/react-Cal_Zw8K.webp",
+      "assets/three-CJDQQ3u-.webp",
+      "assets/ruby-0BrGamWS.webp",
+      "assets/python-Dcl87Hf0.webp",
+      "assets/haskell-C-wH2uyN.webp",
+      "assets/rust-D4t0Lymg.webp",
+      "assets/docker-DlsrmhJT.webp",
+      "assets/figma-DLF-m7dJ.webp",
+      "assets/github-Bkv7RHyx.webp",
+      "assets/x-CYuNpUEq.png",
+      "assets/discord-CX2OhRgF.png",
+      "assets/blog-D5gNVAIv.png",
+      "assets/discord-BH54bPXc.webp",
+      "assets/blog-u6osIEZg.webp"
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-qVSCBi0G.js",
+    "file": "assets/client-CsVj6pnz.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
     "imports": [
-      "_web-DEzZftNo.js"
+      "_web-BJwamogC.js"
     ],
     "dynamicImports": [
       "src/routes/index.tsx?pick=default&pick=$css"
     ],
     "css": [
-      "assets/client-B1DcTBlH.css"
+      "assets/client-WPcJCSeM.css"
     ]
   }
 }
