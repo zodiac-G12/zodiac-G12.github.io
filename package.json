@@ -16,7 +16,8 @@
     "serve": "serve .output/public",
     "lint-staged": "lint-staged",
     "format": "biome format --write ./src",
-    "lint": "biome lint ./src"
+    "lint": "biome lint ./src",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@solidjs/router": "^0.15.3",
