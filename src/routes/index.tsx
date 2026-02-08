@@ -2,7 +2,7 @@ import { Profile, Domain, Program, Contact } from "~/components/unions";
 
 export default function Home() {
   return (
-    <main class="text-center mx-auto text-gray-700 px-4 py-10">
+    <main class="px-4 py-10 mx-auto text-center text-gray-700">
       <Profile />
 
       <div class="pt-10">
